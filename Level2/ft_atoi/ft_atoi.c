@@ -2,40 +2,35 @@ int	ft_atoi(const char *str)
 {
 	int	i;
 	int	result;
-	int	sign;
 
 	i = 0;
 	result = 0;
-	sign = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if (str[i] == '+')
-		i++;
-	else if (str[i] == '-')
+	while (str[i] != '\0')
 	{
-		sign = -1;
-		i++;
+		if (str[i] >= '0' && str[i] <= '9')
+		{
+			result = (result * 10) + (str[i] - '0');
+			i++;
+		}
+		else
+			break;
 	}
-	while (str[i] > '0' && str[i] < '9')
-	{
-		result = (10 * result) + (str[i] - 48);
-		i++;
-	}
-	return (result * sign);
+	return (result);
 }
 
-/*
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+
 int	main(int ac, char *av[])
 {
-	if (ac == 2)
+	if (ac != 2)
 	{
-		printf("%d\n",ft_atoi(av[1]));
-		printf("%d\n",atoi(av[1]));
+		write (1, "\n", 1);
+		return (0);
 	}
-	else
-		printf("\n");
+	printf("ft_atoi = %d\n", ft_atoi(av[1]));
+	printf("atoi = %d\n", atoi(av[1]));
 	return (0);
 }
-*/
+
