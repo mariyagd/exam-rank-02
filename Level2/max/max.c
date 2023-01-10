@@ -4,7 +4,12 @@ int	max(int* tab, unsigned int len)
 	unsigned int	i;
 
 	i = 0;
-	max = tab[i];
+	max = 0;
+	if (len > 0)
+	{
+		max = tab[i];
+		i++;
+	}
 	while (i < len)
 	{
 		if (tab[i] > max)
@@ -17,8 +22,8 @@ int	max(int* tab, unsigned int len)
 #include <stdio.h>
 int	main(void)
 {
-	int	tab[5] = {2, 6, 8, 3};
-	printf("%d\n", max(tab, 0));
+	int	tab[6] = {-2, -9, -10, -6, -8, -3};
+	printf("%d\n", max(tab, 6));
 	return (0);
 }
 
