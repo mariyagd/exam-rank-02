@@ -18,13 +18,13 @@ int	max(int* tab, unsigned int len)
 	}
 	return (max);
 }
-
+/*
 #include <stdio.h>
 int	main(void)
 {
 	int	tab[6] = {-2, -9, -10, -6, -8, -3};
 	printf("%d\n", max(tab, 6));
 	return (0);
-}
+}*/
 
 
