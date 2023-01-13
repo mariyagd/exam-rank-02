@@ -1,4 +1,4 @@
-int	ft_strlen(const char *str)
+int	ft_strlen_int(const char *str)
 {
 	int	i;
 
@@ -75,12 +75,18 @@ int	ft_atoi_base(const char *str, int str_base)
 	int	i;
 	int	count;
 	int	result;
-	int	a;
+	int	sign;
 
 	i = 0;
 	result = 0;
-	count = ft_strlen(str) - 1;
-	a = 0;
+	count = ft_strlen_int(str) - 1;
+	sign = 1;
+	if (str[i] == '-')
+	{
+		i++;
+		sign = -1;
+		count--;
+	}
 	while (str[i] != 0)
 	{
 		if (str[i] >= '0' && str[i] <= '9')
@@ -93,19 +99,17 @@ int	ft_atoi_base(const char *str, int str_base)
 		}
 		i++;
 		count--;
+
 	}
-	return (result);
+	return (result * sign);
 }
 
-
+/*
 #include <stdlib.h>
 #include <stdio.h>
-int	main(int ac, char *av[])
+int	main(void)
 {
-	if (ac == 3)
-	{
-		printf("%d\n", ft_atoi_base(av[1], atoi(av[2])));
-	}
+		printf("%d\n", ft_atoi_base("-569", 16));
 	return (0);
 }
-
+*/
