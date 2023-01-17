@@ -1,3 +1,4 @@
+
 int	ft_strlen_int(const char *str)
 {
 	int	i;
