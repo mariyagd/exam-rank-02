@@ -1,3 +1,26 @@
+Please note that I used `content` instead of `data` so I can use my function of my libft library for my main.
+```
+typedef struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+```
+In my main I compare 10 elements with content of type `int` with one `int` value.
+
+My `cmp` function is:
+
+```
+int cmp(int *a, int *b)
+{
+	if (*a == *b)
+		return (0);
+	else
+		return (1);
+}
+```
+
+
 ```
 Assignment name  : ft_list_remove_if
 Expected files   : ft_list_remove_if.c
