@@ -26,7 +26,7 @@ typedef struct      s_list
 $>
 ```
 ---
-#### Exemple: what this should do:
+#### Exemple: what this function should do:
 
 **Input :** list with content of type int
 	
