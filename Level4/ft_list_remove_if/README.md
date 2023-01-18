@@ -84,6 +84,6 @@ In my main I compare 10 elements with content of type `int` with one `int` value
 
 ### Exemple of output of my program:
 
-<img width="853" alt="Capture d’écran 2023-01-18 à 11 30 13" src="https://user-images.githubusercontent.com/109855801/213148632-ff1ddfa5-d7f0-49f8-ac4e-4ddbd3bc7d16.png">
 
+<img width="847" alt="Capture d’écran 2023-01-18 à 11 48 01" src="https://user-images.githubusercontent.com/109855801/213152241-aedf0b89-3469-4827-9155-457282bfc382.png">
 
