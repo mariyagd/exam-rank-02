@@ -1,24 +1,3 @@
-Please note that I used `content` instead of `data` so I can use my function of my libft library for my main.
-```
-typedef struct	s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
-```
-In my main I compare 10 elements with content of type `int` with one `int` value.
-
-My `cmp` function is:
-
-```
-int cmp(int *a, int *b)
-{
-	if (*a == *b)
-		return (0);
-	else
-		return (1);
-}
-```
 
 
 ```
@@ -46,12 +25,65 @@ typedef struct      s_list
 }                   t_list;
 $>
 ```
-### Exemple:
+---
+#### Exemple: what this function should do:
 
-Input  : list list{1, 2, 3, 4, 5};
-         list.remove(4);
-Output : 1, 2, 3, 5
+**Input :** list with content of type int
+	
+	t_list list = {2, 2, 3, 2, 4, 2, 5, 2, 2, 9}; 
 
-Input  : list list{1, 2, 2, 2, 5, 6, 7};
-         list.remove(2);
-Output : 1, 5, 6, 7
+	nbr to compare  = 2;
+         
+	ft_list_remove_if(...);
+
+**Output :** 
+	
+	3, 4, 5, 9
+
+**Input :** list with contents of type int
+
+	t_list list{1, 2, 2, 2, 5, 6, 7}; 
+	
+	nbr to compare = 2;
+        
+	ft_list_remove_if(...);
+	
+**Output :** 
+	
+	1, 5, 6, 7
+---
+
+Please note that I used `content` instead of `data` so I can use the functions of my libft library in my main.
+```
+typedef struct	s_list
+{
+	void		*content;
+	struct s_list	*next;
+}			t_list;
+```
+---
+My `cmp` function is:
+
+```
+int cmp(int *a, int *b)
+{
+	if (*a == *b)
+		return (0);
+	else
+		return (1);
+}
+```
+
+It takes pointers as arguments because `(*begin_list)->content` and `data_ref` are indeed pointers to `int` values.
+
+---
+
+In my main I compare 10 elements with content of type `int` with one `int` value.
+
+***
+
+### Exemple of output of my program:
+
+
+<img width="847" alt="Capture d’écran 2023-01-18 à 11 48 01" src="https://user-images.githubusercontent.com/109855801/213152241-aedf0b89-3469-4827-9155-457282bfc382.png">
+
