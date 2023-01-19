@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-static size_t	ft_count_words(char *str)
+size_t	ft_count_words(char *str)
 {
 	size_t	i;
 	size_t	count;
@@ -21,7 +21,7 @@ static size_t	ft_count_words(char *str)
 	return (count);
 }
 
-static char	*ft_fill_result(char *str)
+char	*ft_fill_result(char *str)
 {
 	char	*result;
 	size_t	i;
@@ -69,7 +69,7 @@ char    **ft_split(char *str)
 	result[i] = 0;
 	return (result);
 }
-/*
+
 #include <stdio.h>
 int	main(int ac, char *av[])
 {
@@ -86,4 +86,4 @@ int	main(int ac, char *av[])
 		}
 	}
 	return (0);
-}*/.
+}
