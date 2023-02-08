@@ -41,11 +41,7 @@ int	main(int ac, char *av[])
 	{
 		while (av[1][i] != '\0')
 		{
-<<<<<<< Updated upstream
 			if (ft_strchr(av[2], av[1][i]) != 0 && ft_strnchr(av[1], i, av[1][i]) == 0)
-=======
-			if (ft_strchr(av[1], av[1][i]) == 1)
->>>>>>> Stashed changes
 				write(1, &av[1][i], 1);
 			i++;
 		}

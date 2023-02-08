@@ -1,36 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 int	ft_atoi(const char *str)
 {
 	int	i;
 	int	result;
+	int	sign;
 
 	i = 0;
 	result = 0;
-	while (str[i] != '\0')
+	sign  = 1;
+	while (str[i] != 0 && (str[i] == ' ' || str[i] == '\t' \
+				|| str[i] == '\n' || str[i] == '\v' \
+				|| str[i] == '\f' || str[i] == '\r'))
+		i++;
+	if (str[i] == '+')
+		i++;
+	else if (str[i] == '-')
 	{
-		if (str[i] >= '0' && str[i] <= '9')
-		{
-			result = (result * 10) + (str[i] - '0');
-			i++;
-		}
-		else
-			break;
+		sign = -1;
+		i++;
 	}
-	return (result);
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10;
+		result = (str[i] - 48) + result;
+		i++;
+	}
+	return (result * sign);
 }
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
 
-int	main(int ac, char *av[])
+int	main(int ac, char **av)
 {
-	if (ac != 2)
-	{
-		write (1, "\n", 1);
-		return (0);
-	}
-	printf("ft_atoi = %d\n", ft_atoi(av[1]));
-	printf("atoi = %d\n", atoi(av[1]));
+	(void)ac;
+	(void)av;
+
+	char	*str = "\t\n\v\f\r +96";
+	printf("%d\n", atoi(str));
+	printf("%d\n", ft_atoi(str));
+
+	char	*str1 = "\t\n\v\f\r -96";
+	printf("%d\n", atoi(str1));
+	printf("%d\n", ft_atoi(str1));
 	return (0);
 }
 
