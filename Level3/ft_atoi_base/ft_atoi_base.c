@@ -105,12 +105,13 @@ int	ft_atoi_base(const char *str, int str_base)
 	return (result * sign);
 }
 
-/*
+
 #include <stdlib.h>
 #include <stdio.h>
 int	main(void)
 {
 		printf("%d\n", ft_atoi_base("-569", 16));
+		printf("%d\n", ft_atoi_base("13", 8));
 	return (0);
 }
-*/
+

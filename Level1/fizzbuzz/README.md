@@ -1,3 +1,4 @@
+```
 Assignment name  : fizzbuzz
 Expected files   : fizzbuzz.c
 Allowed functions: write
@@ -36,3 +37,4 @@ fizzbuzz
 fizz
 buzz
 $>
+```
