@@ -21,5 +21,25 @@ Your function must be declared as follows:
 int	ft_atoi_base(const char *str, int str_base);
 ```
 
-Solution:
-25<sub>8</sub>sub> = ((2 x 8<sup>1</sup>sup>) + (4 x 8<sup>0</sup>sup>))<sub>10</sub>sub>
+Exemple: 
+- 25 in octal to decimal
+`ft_atoi("25", 8);`
+
+25<sub>8</sub> = ((2 x 8<sup>1</sup>) + (5 x 8<sup>0</sup>))<sub>10</sub>
+
+25<sub>8</sub> = ((2 x 8) + (5 x 1))<sub>10</sub>
+
+25<sub>8</sub> = (16 + 5)<sub>10</sub>
+
+25<sub>8</sub> = 21<sub>10</sub>
+
+- 11101<sub>2</sub> in binary to decimal
+`ft_atoi("11101", 2);`
+
+11101<sub>2</sub> = ((1 x 2<sup>4</sup>) + (1 x 2<sup>3</sup>) + (1 x 2<sup>2</sup>) + (0 x 2<sup>1</sup>) + (1 x 2<sup>0</sup>))<sub>10</sub>
+
+11101<sub>2</sub> = ((1 x 16) + (1 x 8) + (1 x 4) + (0 x 2) + (1 x 1))<sub>10</sub>
+
+11101<sub>2</sub> = (16 + 8 + 4 + 0 + 1)<sub>10</sub>
+
+11101<sub>2</sub> = 29<sub>10</sub>
