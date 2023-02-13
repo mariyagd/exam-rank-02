@@ -1,6 +1,5 @@
 #include <unistd.h>
 
-// question pour ce qui en commentaire - est ce que !str == str[end] == 0
 void	ft_rev(char *str)
 {
 	int	end = 0;

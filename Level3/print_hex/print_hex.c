@@ -1,13 +1,13 @@
 #include <unistd.h>
 
-void	ft_put_hexanbr(int	n)
+void	ft_put_hexanbr(unsigned int	n)
 {
 	if (n > 15)
 	{
 		ft_put_hexanbr(n / 16);
 		ft_put_hexanbr(n % 16);
 	}
-	if (n < 10)
+	else if (n < 10)
 	{
 		n = n + 48;
 		write(1, &n, 1);
@@ -19,13 +19,16 @@ void	ft_put_hexanbr(int	n)
 	}
 }
 
-int	ft_atoi(const char *str)
+unsigned int	ft_atoi(const char *str)
 {
-	int	i;
-	int	result;
+	unsigned int	i;
+	unsigned int	result;
 
 	i = 0;
 	result = 0;
+
+	if (str[i] == '+')
+		i++;
 	while (str[i] != '\0')
 	{
 		if (str[i] >= '0' && str[i] <= '9')
@@ -43,7 +46,7 @@ int	main(int ac, char *av[])
 {
 	if (ac == 2)
 	{
-		int	n = ft_atoi(av[1]);
+		unsigned int n = ft_atoi(av[1]);
 		ft_put_hexanbr(n);
 	}
 	write(1, "\n", 1);
