@@ -20,3 +20,6 @@ Your function must be declared as follows:
 
 int	ft_atoi_base(const char *str, int str_base);
 ```
+
+Solution:
+25<sub>8</sub>sub> = ((2 x 8<sup>1</sup>sup>) + (4 x 8<sup>0</sup>sup>))<sub>10</sub>sub>
