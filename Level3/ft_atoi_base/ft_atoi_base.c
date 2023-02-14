@@ -92,11 +92,11 @@ int	ft_atoi_base(const char *str, int str_base)
 	{
 		if (str[i] >= '0' && str[i] <= '9')
 		{
-			result = result + (str[i] - '0')* power(str_base, count);
+			result = result + (str[i] - '0') * power(str_base, count);
 		}
 		if ((str[i] >= 'A' && str[i] <= 'F') || (str[i] >= 'a' && str[i] <= 'f'))
 		{
-			result = result + transform(str[i])*power(str_base, count);
+			result = result + transform(str[i]) * power(str_base, count);
 		}
 		i++;
 		count--;
