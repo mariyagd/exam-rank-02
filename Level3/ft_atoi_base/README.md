@@ -21,18 +21,26 @@ Your function must be declared as follows:
 int	ft_atoi_base(const char *str, int str_base);
 ```
 
-Deal with minus signs, exemples:
+### Deal with minus signs, exemples:
 
 `ft_atoi("-233", 10);` return `-233`
+
 `ft_atoi("--233", 10);` return `0`
+
 `ft_atoi("-2-33", 10);` return `-2`
+
 `ft_atoi("-2147483648", 10);` return `-2147483648`
 
-Other outputs:
+### Other outputs:
+
 `ft_atoi("2147483647", 10);` return `2147483647`
+
 `ft_atoi("+2147483647", 10);` return `2147483647`
 
-Exemple of converting:
+### Exemple of converting:
+
+<img width="417" alt="Screen Shot 2023-02-14 at 11 43 00 AM" src="https://user-images.githubusercontent.com/109855801/218731548-db7ecef5-e0b0-456b-91d9-9033c3f05024.png">
+
 
 - 25 in octal to decimal
 `ft_atoi("25", 8);`
